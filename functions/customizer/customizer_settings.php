@@ -22,6 +22,11 @@ function kotha_register_theme_customizer( $wp_customize ) {
    		'title'      => __('General Settings', 'kotha'),
    		'priority'   => 100,
 	) );
+        
+        $wp_customize->add_section( 'kotha_home_banner_section' , array(
+   		'title'      => __('Home Banner', 'kotha'),
+   		'priority'   => 104,
+	) );
 	
 	
 	
@@ -59,6 +64,20 @@ function kotha_register_theme_customizer( $wp_customize ) {
 	        'kotha_logo',
 	        array(
 	        	'sanitize_callback' => 'esc_url'
+	        )
+	    );
+                
+                // home banner
+		$wp_customize->add_setting(
+	        'kotha_home_banner',
+	        array(
+	        	'sanitize_callback' => 'esc_url'
+	        )
+	    );
+                $wp_customize->add_setting(
+	        'kotha_home_banner_text',
+	        array(
+	            'sanitize_callback' => 'wp_kses'
 	        )
 	    );
 		
@@ -237,6 +256,33 @@ function kotha_register_theme_customizer( $wp_customize ) {
 					'section'    => 'title_tagline',
 					'settings'   => 'kotha_logo',
 					'priority'	 => 60
+				)
+			)
+		);
+                
+                // page home banner
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'kotha_home_banner',
+				array(
+					'label'      => __('Upload Banner', 'kotha'),
+					'section'    => 'kotha_home_banner_section',
+					'settings'   => 'kotha_home_banner',
+					'priority'	 => 60
+				)
+			)
+		);
+                $wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'kotha_home_banner_text',
+				array(
+					'label'      => __('Background Text', 'kotha'),
+					'section'    => 'kotha_home_banner_section',
+					'settings'   => 'kotha_home_banner_text',
+					'type'		 => 'textarea',
+					'priority'	 => 2
 				)
 			)
 		);

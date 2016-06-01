@@ -5,8 +5,8 @@
 			<div class="footer-top"><?php dynamic_sidebar('footer-widget'); ?></div>
 		</div>
 	</div>
-
-	<div class="copy-right-text text-center">
+    <div class="container">
+	<div class="copy-right-text">
 		<?php if(get_theme_mod('kotha_footer_copyright')): ?>
 			<p><?php
 			$copyright = get_theme_mod('kotha_footer_copyright');
@@ -20,6 +20,7 @@
 			echo wp_kses( $copyright, $allowed_tags ); ?></p>
 		<?php endif; ?>
 	</div><!-- /Copyright Text -->
+        </div>
 </footer><!-- /#Footer -->
 
 <?php if (!get_theme_mod('kotha_back_to_top')): ?>

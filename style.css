@@ -20,6 +20,7 @@
 	body {
 		margin: 0;
 		font-family: 'sf_ui_displayregular', Arial, sans-serif;
+                letter-spacing: .03em;
 	}
 
 	article,
@@ -2039,16 +2040,50 @@
 /* === Footer === */
 
 	#footer{
-		background-color: #fff;
+            color:#eee;
+		background-color: #363d48;
 		box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 	}
-
+        #footer .widget-title{
+            font-weight:300;
+            font-size:12px;
+            color:#fff;
+        }
 	.footer-top{
-		padding-top: 50px;
-		padding-bottom: 50px;
+		padding-top: 40px;
+		padding-bottom: 40px;
 		overflow: hidden;
+                border-bottom:1px solid #494f59;
+                font-size:12px;
 	}
-
+        
+        .footer-top .menu{
+        }
+        .footer-top .menu li{
+            margin:0;
+        }
+        .footer-top .menu li a{
+            font-family: 'sf_ui_displaylight', sans-serif;
+            color:#828995;
+            font-size:14px;
+            font-weight:100;
+            text-transform:none;
+        }
+        .footer-top .menu li a:hover{
+            text-decoration:underline;
+            
+        }
+        .footer-top ul.menu{
+            padding-left:0;
+        }
+        .footer-top .widget-title{
+		text-align: left;
+	}
+        .footer-top .about-widget .img-responsive{
+                width:auto;
+                max-width:100%;
+                
+        }
 	.footer-top .widget-title{
 		text-align: left;
 	}
@@ -2058,10 +2093,12 @@
 	}
 
 	.copy-right-text{
-		padding-top: 30px;
-		padding-bottom: 35px;
+		padding-top: 20px;
+		padding-bottom: 20px;
 		background-color: #363d48;
-		color: #ffffff;
+		color: #eee;
+                font-size:11px;
+                font-family: 'sf_ui_displaylight', Arial, sans-serif;
 	}
 
 	.copy-right-text p{
@@ -2076,7 +2113,33 @@
 		color: #3fb6e1;
 	}
 
+        .outer {
+  width: 100%;
+  height: 100%;
+  display: table; }
 
+.middle {
+  display: table-cell;
+  vertical-align: middle; }
 
+.inner {
+  display: block;
+  text-align: center; }
 
+        .home-banner{
+            width:100%;
+            height:350px;
+            background-color:#363d48;
+            background-repeat:no-repeat;
+            background-position:center center;
+            -webkit-background-size:cover;
+            -moz-background-size:cover;
+            background-size:cover;
+            color:#fff;
+        }
+        .home-banner h1{
+            color:#fff;
+            font-weight:100;
+            font-size:2.8em;
+        }
 

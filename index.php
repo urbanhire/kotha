@@ -1,5 +1,34 @@
 <?php get_header(); ?>
-
+    <?php if(get_theme_mod('kotha_home_banner')): ?>
+    <div class="home-banner" style="background-image:url('<?php echo esc_url(get_theme_mod('kotha_home_banner'));?>');">
+            
+                <div class="outer">
+                    <div class="middle">
+                        <div class="inner">
+                            <div class="container">
+                                <h1>
+                        <?php if(get_theme_mod('kotha_home_banner_text')): ?>
+			<?php
+			$bg_text = get_theme_mod('kotha_home_banner_text');
+			$allowed_tags = array(
+				'span' => array(),
+				'a' => array(
+					'href' => array(),
+					'title' => array()
+				)
+			);
+			echo wp_kses( $bg_text, $allowed_tags ); ?>
+		<?php endif; ?>
+                    </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+    </div><!-- /Show banner -->
+    <?php else: ?>
+                        <!--banner hidden-->
+		<?php endif; ?>
 	<div class="st-content">
 		<div class="container">
 			<div class="row">
