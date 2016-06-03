@@ -246,7 +246,7 @@
 		font-weight:400;
 		line-height: 23px;
 		background: #f1f1f1;
-		color:#2d2d2d;
+		color:#555555;
 		-webkit-font-smoothing: antialiased;
 	}
 
@@ -921,7 +921,7 @@
 	}
 
 	.page .entry-header h1.entry-title {
-		color: #2d2d2d;
+		color: #555555;
 		font-size: 30px;
 		font-family: 'sf_ui_displaymedium', sans-serif;
 		font-weight: 400;
@@ -954,7 +954,7 @@
 	}
 
 	.search-header .search-title h1{
-		color: #2d2d2d;
+		color: #555555;
 		font-size: 30px;
 		font-family: 'sf_ui_displaybold', sans-serif;
 		font-weight: 400;
@@ -1055,7 +1055,7 @@
 	}
 
 	article header.entry-header h1.entry-title a{
-		color: #2d2d2d;
+		color: #555555;
 		font-size: 30px;
 		font-family: 'sf_ui_displayregular', sans-serif;
 		font-weight: 400;
@@ -1374,7 +1374,7 @@
 	}
 
 	#comments .comment-reply a{
-		color: #2d2d2d;
+		color: #555555;
 		border: 1px solid #ccc;
 		padding: 3px 16px;
 		display: inline-block;
@@ -1874,7 +1874,7 @@
 	
 	/* Latest Posts*/
 		.widget .latest-posts .entry-title a{
-			color: #2d2d2d;
+			color: #555555;
 		}
 
 		.widget .latest-posts .entry-title a:hover{
