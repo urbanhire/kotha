@@ -7,18 +7,25 @@
 	</div>
     <div class="container">
 	<div class="copy-right-text">
-		<?php if(get_theme_mod('kotha_footer_copyright')): ?>
-			<p><?php
-			$copyright = get_theme_mod('kotha_footer_copyright');
-			$allowed_tags = array(
-				'strong' => array(),
-				'a' => array(
-					'href' => array(),
-					'title' => array()
-				)
-			);
-			echo wp_kses( $copyright, $allowed_tags ); ?></p>
-		<?php endif; ?>
+    <div class="pull-left text-u-c text-xs m-t-xs terms--condition">
+      <span>
+        <?php if(get_theme_mod('kotha_footer_copyright')): ?>
+  			<?php
+  			$copyright = get_theme_mod('kotha_footer_copyright');
+  			$allowed_tags = array(
+  				'strong' => array(),
+  				'a' => array(
+  					'href' => array(),
+  					'title' => array()
+  				)
+  			);
+  			echo wp_kses( $copyright, $allowed_tags ); ?>
+		    <?php endif; ?>
+      </span>
+    </div>
+    <div class="pull-left text-u-c text-xs m-t-xs terms--policy">
+      <a href="https://www.urbanhire.com/terms-and-conditions" title="Urbanhire Terms &amp; Conditions" class="m-r m-l">Terms &amp; Conditions &amp; Privacy Policy</a>
+    </div>
 	</div><!-- /Copyright Text -->
         </div>
 </footer><!-- /#Footer -->
