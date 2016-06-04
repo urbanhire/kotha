@@ -8,6 +8,12 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div id="primary" class="content-area">
+						<?php
+                if ( function_exists('yoast_breadcrumb') ) {
+                    yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+                }
+            ?>
+
 						<main id="main" class="site-main" role="main">
 
 							<?php while ( have_posts() ) : the_post(); ?>
@@ -29,7 +35,7 @@
 
 						</main><!-- #main -->
 					</div><!-- #primary -->
-				</div> <!-- /col -->		
+				</div> <!-- /col -->
 			</div> <!-- /.row -->
 		</div> <!-- /.container -->
 	</div> <!-- /.st-content -->

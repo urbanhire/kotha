@@ -6,7 +6,6 @@
   //     $('#st-preloader').delay(350).fadeOut('slow');
   //   });
   // }());
-
   (function () {
     $(window).scroll(function() {
       if ($(this).scrollTop() > 100) {

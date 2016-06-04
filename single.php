@@ -13,6 +13,12 @@
                  ?>
                 ">
                 <div id="primary" class="content-area">
+                <?php
+                    if ( function_exists('yoast_breadcrumb') ) {
+                        yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+                    }
+                ?>
+
                     <main id="main" class="site-main" role="main">
 
                         <?php if (have_posts()) :
