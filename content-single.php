@@ -44,6 +44,15 @@
 
 <!-- Video Post -->
     <?php elseif(has_post_format('video')) : ?>
+        <header class="entry-header">
+            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+        </header> <!--/.entry-header -->
+
+        <?php if ( 'post' == get_post_type() ) : ?>
+        <div class="entry-meta">
+            <?php kotha_posted_on(); ?>
+        </div><!-- .entry-meta -->
+        <?php endif; ?>
 
         <div class="thumbnails">
             <div class="entry-video">
@@ -56,6 +65,8 @@
             </div>
         </div>
 
+<!-- Audio Post -->
+    <?php elseif(has_post_format('audio')) : ?>
         <header class="entry-header">
             <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
         </header> <!--/.entry-header -->
@@ -65,9 +76,6 @@
             <?php kotha_posted_on(); ?>
         </div><!-- .entry-meta -->
         <?php endif; ?>
-
-<!-- Audio Post -->
-    <?php elseif(has_post_format('audio')) : ?>
 
         <div class="thumbnails">
             <div class="entry-audio">
@@ -80,27 +88,18 @@
             </div> <!--/.audio-content -->
         </div> <!--/.thumbnails -->
 
-        <header class="entry-header">
-            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-        </header> <!--/.entry-header -->
-
-        <?php if ( 'post' == get_post_type() ) : ?>
-        <div class="entry-meta">
-            <?php kotha_posted_on(); ?>
-        </div><!-- .entry-meta -->
-        <?php endif; ?>
-
     <?php else : ?>
 
-        <header class="entry-header">
-            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-        </header> <!--/.entry-header -->
-
-        <?php if ( 'post' == get_post_type() ) : ?>
-        <div class="entry-meta">
-            <?php kotha_posted_on(); ?>
-        </div><!-- .entry-meta -->
-        <?php endif; ?>
+        <div class="padding-content text-center">
+            <header class="entry-header">
+                <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+            </header> <!--/.entry-header -->
+            <?php if ( 'post' == get_post_type() ) : ?>
+            <div class="entry-meta">
+                <?php kotha_posted_on(); ?>
+            </div><!-- .entry-meta -->
+            <?php endif; ?>
+        </div>
 
         <?php if(has_post_thumbnail()) : ?>
         <div class="thumbnails">
