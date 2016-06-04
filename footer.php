@@ -26,7 +26,7 @@
       <div class="pull-left text-u-c text-xs m-t-xs terms--policy">
         <a href="https://www.urbanhire.com/terms-and-conditions" title="Urbanhire Terms &amp; Conditions" class="m-r m-l">Terms &amp; Conditions &amp; Privacy Policy</a>
       </div>
-      <p>&nbps;</p>
+      <p>&nbsp;</p>
   	</div><!-- /Copyright Text -->
   </div>
 </footer><!-- /#Footer -->
