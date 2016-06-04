@@ -34,13 +34,13 @@
 	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TWFJJF');
 	</script>
-<?php if(!get_theme_mod('kotha_preloader') ): ?>
-    <div id="st-preloader">
+<?php // if(!get_theme_mod('kotha_preloader') ): ?>
+    <!-- <div id="st-preloader">
         <div id="pre-status">
             <div class="preload-placeholder"></div>
         </div>
-    </div>
-<?php endif; ?>
+    </div> -->
+<?php // endif; ?>
 <!-- /Preloader -->
 
 <header id="header">
