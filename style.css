@@ -322,7 +322,7 @@
 
 	*,
 	*:before,
-	*:after { 
+	*:after {
 	}
 
 	blockquote:before,
@@ -524,14 +524,14 @@
 		box-shadow: 0px 1px 3px rgba(190, 190, 190, 0.5);
 		position: relative;
 		z-index: 10;
-		background-color: #3fb6e1;
+		background-color: rgba(0,0,0,.8);
 		height: 60px;
 	}
 
 	#header .container{
 		position: relative;
 	}
-	
+
 
 	.menu {
 		float:left;
@@ -565,7 +565,7 @@
 
 	.menu li a {
 		font-size: 14px;
-		font-family: 'sf_ui_displaysemibold', sans-serif;
+		font-family: 'sf_ui_displaylight', sans-serif;
 		font-weight:600;
 		text-transform: uppercase;
 		color: #ffffff;
@@ -575,14 +575,14 @@
 		-ms-transition:.3s;
 		-moz-transition:.3s;
 		-webkit-transition:.3s;
-		
+
 	}
 	.menu li.current-menu-item> a, .menu li.current_page_item> a, .menu li a:hover {
 		color:#0D88A5;
 	}
 	@media all and (min-width: 1200px){
 		#header{
-			
+
 			position:fixed;
 			z-index:8888;
 			top:0;
@@ -593,9 +593,9 @@
 			width:100%;
 			height:60px;
 		}
-		
+
 	}
-	
+
 		/*** DROPDOWN ***/
 		.menu .sub-menu,
 		.menu .children {
@@ -610,7 +610,7 @@
 			-moz-box-shadow: 0 5px 4px -4px rgba(190,190,190,.1);
 	        box-shadow: 0 5px 4px -4px rgba(190,190,190,.1);
 		}
-		
+
 		ul.menu ul a,
 		.menu ul ul li a {
 			color: #333333;
@@ -629,7 +629,7 @@
 		.menu ul ul li:first-child a{
 			border-top: 0px solid #ddd;
 		}
-		
+
 		ul.menu ul li,
 		.menu ul ul li {
 			padding-right:0;
@@ -646,12 +646,12 @@
 		.menu ul li:hover > ul {
 			display: block;
 		}
-		
+
 		.menu .sub-menu ul,
-		.menu .children ul {	
+		.menu .children ul {
 			left: 100%;
 			top: 0;
-			
+
 		}
 
 	/* --- Menus ---*/
@@ -1010,11 +1010,11 @@
 	}
 
 	.entry-meta a{
-		color: #9e9e9e;
+		color: #4db6ce;
 		margin-left: 2px;
 	}
 	.entry-meta a:hover{
-		color: #3fb6e1;
+		color: #4db6ce;
 	}
 
 	.list-inline li {
@@ -1188,24 +1188,24 @@
 	/* Pagination */
 	.pagination{
 	}
-	.pagination li a, 
+	.pagination li a,
 	.pagination li span{
 		color: #777;
 		border: 1px solid #e5e5e5;
 		padding: 8px 15px;
 		display: inline-block;
 	}
-	.pagination li:last-child a, 
+	.pagination li:last-child a,
 	.pagination li:last-child span,
-	.pagination li:first-child a, 
+	.pagination li:first-child a,
 	.pagination li:first-child span{
 		border-radius: 0;
 	}
 
-	.pagination li a:focus, 
-	.pagination li a:hover, 
-	.pagination li span:focus, 
-	.pagination li span.current, 
+	.pagination li a:focus,
+	.pagination li a:hover,
+	.pagination li span:focus,
+	.pagination li span.current,
 	.pagination li span:hover {
 		color: #fff;
 		background-color: #3fb6e1;
@@ -1296,8 +1296,8 @@
 	#comments .comment-avartar{
 		width: 75px;
 	}
-	#respond input[type="text"], 
-	#respond input[type="email"], 
+	#respond input[type="text"],
+	#respond input[type="email"],
 	#respond input[type="url"] {
 		display: block;
 		width: 100%;
@@ -1310,8 +1310,8 @@
 		border-radius: 0;
 	}
 
-	#respond input:focus[type="text"], 
-	#respond input:focus[type="email"], 
+	#respond input:focus[type="text"],
+	#respond input:focus[type="email"],
 	#respond input:focus[type="url"],
 	#respond textarea:focus {
 		outline: none;
@@ -1396,13 +1396,13 @@
 		letter-spacing: .30px;
 	}
 
-	#comments .comment-author a, 
+	#comments .comment-author a,
 	#respond .logged-in-as a{
 		color: #000;
 		font-weight: 700;
 	}
 
-	#comments .comment-author a:hover, 
+	#comments .comment-author a:hover,
 	#respond .logged-in-as a:hover{
 		color: #3fb6e1;
 	}
@@ -1553,7 +1553,7 @@
 
 
 /* --- Quote --- */
-	.entry-qoute blockquote{  
+	.entry-qoute blockquote{
 		padding: 50px;
 		color: #fff;
 		position: relative;
@@ -1575,7 +1575,7 @@
 	.infinity-end.neverending .site-footer {
 		display: block;
 	}
-	
+
 
 /* === Media === */
 	.page-content .wp-smiley,
@@ -1699,7 +1699,7 @@
 
 
 /* === Widgets === */
-	
+
 	.primary-sidebar .widget {
 		margin: 0 0 20px;
 		background-color: #fff;
@@ -1818,60 +1818,60 @@
 			width: 100%;
 			margin-bottom: 0px;
 		}
-		#wp-calendar caption { 
+		#wp-calendar caption {
 			text-align: right;
 			color: #777;
 			font-size: 12px;
 			margin-bottom: 15px;
 			padding-top: 0;
 		}
-		#wp-calendar thead { 
-			font-size: 12px;  
+		#wp-calendar thead {
+			font-size: 12px;
 		}
-		#wp-calendar thead th { 
-			padding-bottom: 10px; 
+		#wp-calendar thead th {
+			padding-bottom: 10px;
 		}
-		#wp-calendar tbody { 
-			color: #aaa; 
+		#wp-calendar tbody {
+			color: #aaa;
 		}
-		#wp-calendar tbody td { 
+		#wp-calendar tbody td {
 			background: #f5f5f5;
-			border: 1px solid #fff; 
-			text-align: center; 
+			border: 1px solid #fff;
+			text-align: center;
 			padding:8px;
 		}
-		#wp-calendar tbody td a { 
-			font-weight:700; 
-			color:#222; 
+		#wp-calendar tbody td a {
+			font-weight:700;
+			color:#222;
 		}
-		#wp-calendar tbody td:hover { 
-			background: #fff; 
+		#wp-calendar tbody td:hover {
+			background: #fff;
 		}
-		#wp-calendar tbody .pad { 
-			background: none; 
+		#wp-calendar tbody .pad {
+			background: none;
 		}
-		#wp-calendar tfoot #next { 
-			font-size: 10px; 
-			text-transform: uppercase; 
-			text-align: right; 
+		#wp-calendar tfoot #next {
+			font-size: 10px;
+			text-transform: uppercase;
+			text-align: right;
 		}
-		#wp-calendar tfoot #prev { 
-			font-size: 10px; 
-			text-transform: uppercase; 
-			padding-top: 10px; 
+		#wp-calendar tfoot #prev {
+			font-size: 10px;
+			text-transform: uppercase;
+			padding-top: 10px;
 		}
 		#wp-calendar tfoot a{
 			color: #3fb6e1;
 		}
-		#wp-calendar thead th { 
-			padding-bottom: 10px; 
-			text-align: center; 
+		#wp-calendar thead th {
+			padding-bottom: 10px;
+			text-align: center;
 		}
 
 		#calendar_wrap table tr td{
 			border-left: 0;
 		}
-	
+
 	/* Latest Posts*/
 		.widget .latest-posts .entry-title a{
 			color: #555555;
@@ -2056,7 +2056,7 @@
                 border-bottom:1px solid #494f59;
                 font-size:12px;
 	}
-        
+
         .footer-top .menu{
         }
         .footer-top .menu li{
@@ -2071,7 +2071,7 @@
         }
         .footer-top .menu li a:hover{
             text-decoration:underline;
-            
+
         }
         .footer-top ul.menu{
             padding-left:0;
@@ -2082,7 +2082,7 @@
         .footer-top .about-widget .img-responsive{
                 width:auto;
                 max-width:100%;
-                
+
         }
 	.footer-top .widget-title{
 		text-align: left;

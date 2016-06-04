@@ -5,12 +5,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
-<?php wp_head(); ?>
+	<link rel="dns-prefetch" href="//www.googletagmanager.com">
+	<link rel="dns-prefetch" href="//www.google-analytics.com">
+	<link rel="dns-prefetch" href="//ssl.google-analytics.com">
+	<link rel="dns-prefetch" href="//s3-ap-southeast-1.amazonaws.com">
+	<link rel="dns-prefetch" href="//s0.wp.com">
+	<link rel="dns-prefetch" href="//graph.facebook.com">
+	<link rel="dns-prefetch" href="//connect.facebook.net">
+	<link rel="dns-prefetch" href="//platform.twitter.com">
+	<link rel="dns-prefetch" href="//syndication.twitter.com">
+	<link rel="dns-prefetch" href="//www.facebook.com">
+	<link rel="dns-prefetch" href="//secure.gravatar.com">
+	<link rel="dns-prefetch" href="//stats.wp.com">
+	<link rel="dns-prefetch" href="//pixel.wp.com">
+	<link rel="dns-prefetch" href="//urbanhire.disqus.com">
+	<link rel="dns-prefetch" href="//referrer.disqus.com">
+	<link rel="dns-prefetch" href="//glitter.services.disqus.com">
+	<link rel="dns-prefetch" href="//a.disquscdn.com">
+	<link rel="dns-prefetch" href="//api.pinterest.com">
+	<link rel="dns-prefetch" href="//www.linkedin.com">
+	<?php wp_head(); ?>
 </head>
-
 <body <?php body_class(); ?>>
-
+	<noscript>
+	  <iframe ssrc="//www.googletagmanager.com/ns.html?id=GTM-TWFJJF" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<script>
+	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TWFJJF');
+	</script>
 <?php if(!get_theme_mod('kotha_preloader') ): ?>
     <div id="st-preloader">
         <div id="pre-status">
