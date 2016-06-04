@@ -105,7 +105,7 @@
 
 			<?php if (!get_theme_mod('kotha_post_date')): ?>
                 <li>
-                    <span class="posted-on"><?php the_time('M d, Y') ?></span>
+                    <span class="posted-on"><?php the_time('d M Y') ?></span>
                 </li>
 
                 <li>/</li>
