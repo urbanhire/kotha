@@ -32,6 +32,16 @@
         </div>
         <?php endif; ?>
 
+        <header class="entry-header">
+            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+        </header> <!--/.entry-header -->
+
+        <?php if ( 'post' == get_post_type() ) : ?>
+        <div class="entry-meta">
+            <?php kotha_posted_on(); ?>
+        </div><!-- .entry-meta -->
+        <?php endif; ?>
+
 <!-- Video Post -->
     <?php elseif(has_post_format('video')) : ?>
 
@@ -45,6 +55,16 @@
             <?php endif; ?>
             </div>
         </div>
+
+        <header class="entry-header">
+            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+        </header> <!--/.entry-header -->
+
+        <?php if ( 'post' == get_post_type() ) : ?>
+        <div class="entry-meta">
+            <?php kotha_posted_on(); ?>
+        </div><!-- .entry-meta -->
+        <?php endif; ?>
 
 <!-- Audio Post -->
     <?php elseif(has_post_format('audio')) : ?>
@@ -60,17 +80,6 @@
             </div> <!--/.audio-content -->
         </div> <!--/.thumbnails -->
 
-    <?php else : ?>
-
-        <?php if(has_post_thumbnail()) : ?>
-        <div class="thumbnails">
-            <?php the_post_thumbnail('post-thumbnails', array('class' => 'post-thumbnail img-responsive')); ?>
-        </div>
-        <?php endif; ?>
-
-    <?php endif; ?>
-
-    <div class="padding-content text-center">
         <header class="entry-header">
             <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
         </header> <!--/.entry-header -->
@@ -81,6 +90,27 @@
         </div><!-- .entry-meta -->
         <?php endif; ?>
 
+    <?php else : ?>
+
+        <header class="entry-header">
+            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+        </header> <!--/.entry-header -->
+
+        <?php if ( 'post' == get_post_type() ) : ?>
+        <div class="entry-meta">
+            <?php kotha_posted_on(); ?>
+        </div><!-- .entry-meta -->
+        <?php endif; ?>
+
+        <?php if(has_post_thumbnail()) : ?>
+        <div class="thumbnails">
+            <?php the_post_thumbnail('post-thumbnails', array('class' => 'post-thumbnail img-responsive')); ?>
+        </div>
+        <?php endif; ?>
+
+    <?php endif; ?>
+
+    <div class="padding-content text-center">
         <div class="entry-content">
             <?php the_content(); ?>
         </div> <!-- //.entry-content -->
