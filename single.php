@@ -22,11 +22,11 @@
 
                                 <?php get_template_part( 'content', 'single'); ?>
 
-                                <!-- <?php if (!get_theme_mod('kotha_post_author')) : ?>
-                                    <div class="padding-content white-color">
-                                        <?php get_template_part( 'user-profile' ); ?>
-                                    </div>
-                                <?php endif; ?> -->
+                                <?php // if (!get_theme_mod('kotha_post_author')) : ?>
+                                    <!-- <div class="padding-content white-color">
+                                        <?php // get_template_part( 'user-profile' ); ?>
+                                    </div> -->
+                                <?php //endif; ?>
 
                                 <?php if (!get_theme_mod('kotha_post_nav')): ?>
                                     <div class="white-color">
