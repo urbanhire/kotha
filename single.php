@@ -13,6 +13,12 @@
                  ?>
                 ">
                 <div id="primary" class="content-area">
+                <?php
+                    if ( function_exists('yoast_breadcrumb') ) {
+                        yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+                    }
+                ?>
+
                     <main id="main" class="site-main" role="main">
 
                         <?php if (have_posts()) :
@@ -22,11 +28,11 @@
 
                                 <?php get_template_part( 'content', 'single'); ?>
 
-                                <?php if (!get_theme_mod('kotha_post_author')) : ?>
-                                    <div class="padding-content white-color">
-                                        <?php get_template_part( 'user-profile' ); ?>
-                                    </div>
-                                <?php endif; ?>
+                                <?php // if (!get_theme_mod('kotha_post_author')) : ?>
+                                    <!-- <div class="padding-content white-color">
+                                        <?php // get_template_part( 'user-profile' ); ?>
+                                    </div> -->
+                                <?php //endif; ?>
 
                                 <?php if (!get_theme_mod('kotha_post_nav')): ?>
                                     <div class="white-color">
@@ -45,9 +51,9 @@
                                     ?>
 
                                 <?php
-                                    // don't-delete 
+                                    // don't-delete
                                     $count_post = get_post_meta( $post->ID, 'post_views_count', true);
-                                    
+
                                     if( $count_post == 'post_views_count'){
                                         $count_post = 0;
                                         delete_post_meta( $post->ID, 'post_views_count');
@@ -57,7 +63,7 @@
                                     {
                                         $count_post = (int)$count_post + 1;
                                         update_post_meta( $post->ID, 'post_views_count', $count_post);
-                                        
+
                                     }
                                 ?>
 

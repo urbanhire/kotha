@@ -28,7 +28,7 @@ function kotha_theme_setup() {
 	add_theme_support( 'title-tag' );
 
 	// Register navigation menu
-	register_nav_menus( 
+	register_nav_menus(
 		array(
 			'main-menu' 		=> __( 'Primary Menu','kotha' )
 		) );
@@ -72,8 +72,8 @@ if ( function_exists('register_sidebar') ) {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer', 'kotha' ),
@@ -81,19 +81,17 @@ if ( function_exists('register_sidebar') ) {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget col-md-3 footer-widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 }
-
-
 
 //////////////////////////////////////////////////////////////////
 // Enqueue scripts and styles.
 //////////////////////////////////////////////////////////////////
 
 function kotha_all_scripts_and_css() {
-	
+
 	// CSS File
 	wp_enqueue_style('sf-ui-display-css', get_template_directory_uri() . '/assets/css/font-sf_ui_display.css', array(), NULL);
 	wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '3.3.6', 'all');
@@ -140,12 +138,12 @@ if(!function_exists('kotha_comment')):
 		<?php
 				break;
 			default :
-			
+
 			global $post;
 		?>
 		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 			<div id="comment-<?php comment_ID(); ?>" class="comment-body media">
-				
+
 					<div class="comment-avartar pull-left">
 						<?php
 							echo get_avatar( $comment, $args['avatar_size'] );
@@ -176,11 +174,11 @@ if(!function_exists('kotha_comment')):
 						</span>
 
 					</div>
-				
+
 			</div>
 		<?php
 			break;
-		endswitch; 
+		endswitch;
 	}
 
 endif;
@@ -216,7 +214,7 @@ include('functions/customizer/customizer_settings.php');
 include('functions/customizer/color_customize.php');
 
 
-//Custom Widgets 
+//Custom Widgets
 require_once get_template_directory()  . '/inc/widgets/blog-posts.php';
 require_once get_template_directory()  . '/inc/widgets/social-icons.php';
 require_once get_template_directory()  . '/inc/widgets/about_widget.php';

@@ -12,6 +12,12 @@
 				 ?>
 				">
 					<div id="primary" class="content-area">
+						<?php
+                if ( function_exists('yoast_breadcrumb') ) {
+                    yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+                }
+            ?>
+
 						<main id="main" class="site-main" role="main">
 
 							<?php while ( have_posts() ) : the_post(); ?>
@@ -19,7 +25,7 @@
 								<?php get_template_part( 'content', 'page' ); ?>
 
 								<?php if (!get_theme_mod('kotha_page_comments')) : ?>
-									
+
 									<?php
 										// If comments are open or we have at least one comment, load up the comment template
 										if ( comments_open() || get_comments_number() ) : ?>
@@ -28,7 +34,7 @@
 											</div>
 										<?php endif;
 									?>
-									
+
 								<?php endif; ?>
 							<?php endwhile; // end of the loop. ?>
 
@@ -37,7 +43,7 @@
 				</div> <!-- /col -->
 				<!-- Blogsidebar -->
 				<?php if (get_theme_mod( 'kotha_page_layout' ) == 'full') {
-					
+
 				} else {?>
 					<div class="col-md-4 col-sm-5">
 			            <div class="primary-sidebar widget-area" role="complementary">

@@ -2,9 +2,9 @@
 
 <!-- Gallery Post -->
     <?php if(has_post_format('gallery')) : ?>
-    
+
         <?php $images = get_post_meta( $post->ID, '_format_gallery_images', true ); ?>
-        
+
         <?php if($images) : ?>
         <div class="thumbnails">
             <div id="blog-gallery-slider" class="carousel slide" data-ride="carousel">
@@ -13,7 +13,7 @@
                     <?php $image_no = 1; ?>
                     <?php foreach($images as $image) : ?>
                         <div class="item <?php if($image_no == 1){ echo 'active'; }; ?>">
-                            <?php $the_image = wp_get_attachment_image_src( $image, 'post-thumbnails' ); ?> 
+                            <?php $the_image = wp_get_attachment_image_src( $image, 'post-thumbnails' ); ?>
                             <?php $the_caption = get_post_field('post_excerpt', $image); ?>
                             <img src="<?php echo esc_url($the_image[0]); ?>" <?php if($the_caption) : ?>title="<?php
                             echo esc_attr($the_caption); ?>"<?php endif; ?> />
@@ -32,9 +32,28 @@
         </div>
         <?php endif; ?>
 
+        <header class="entry-header">
+            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+        </header> <!--/.entry-header -->
+
+        <?php if ( 'post' == get_post_type() ) : ?>
+        <div class="entry-meta">
+            <?php kotha_posted_on(); ?>
+        </div><!-- .entry-meta -->
+        <?php endif; ?>
+
 <!-- Video Post -->
     <?php elseif(has_post_format('video')) : ?>
-    
+        <header class="entry-header">
+            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+        </header> <!--/.entry-header -->
+
+        <?php if ( 'post' == get_post_type() ) : ?>
+        <div class="entry-meta">
+            <?php kotha_posted_on(); ?>
+        </div><!-- .entry-meta -->
+        <?php endif; ?>
+
         <div class="thumbnails">
             <div class="entry-video">
             <?php $st_video = get_post_meta( $post->ID, '_format_video_embed', true ); ?>
@@ -45,10 +64,19 @@
             <?php endif; ?>
             </div>
         </div>
-    
+
 <!-- Audio Post -->
     <?php elseif(has_post_format('audio')) : ?>
-    
+        <header class="entry-header">
+            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+        </header> <!--/.entry-header -->
+
+        <?php if ( 'post' == get_post_type() ) : ?>
+        <div class="entry-meta">
+            <?php kotha_posted_on(); ?>
+        </div><!-- .entry-meta -->
+        <?php endif; ?>
+
         <div class="thumbnails">
             <div class="entry-audio">
             <?php $st_audio = get_post_meta( $post->ID, '_format_audio_embed', true ); ?>
@@ -61,26 +89,27 @@
         </div> <!--/.thumbnails -->
 
     <?php else : ?>
-        
+
+        <div class="padding-content text-center">
+            <header class="entry-header">
+                <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+            </header> <!--/.entry-header -->
+            <?php if ( 'post' == get_post_type() ) : ?>
+            <div class="entry-meta">
+                <?php kotha_posted_on(); ?>
+            </div><!-- .entry-meta -->
+            <?php endif; ?>
+        </div>
+
         <?php if(has_post_thumbnail()) : ?>
         <div class="thumbnails">
             <?php the_post_thumbnail('post-thumbnails', array('class' => 'post-thumbnail img-responsive')); ?>
         </div>
         <?php endif; ?>
-        
+
     <?php endif; ?>
 
     <div class="padding-content text-center">
-        <header class="entry-header">
-            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-        </header> <!--/.entry-header -->
-
-        <?php if ( 'post' == get_post_type() ) : ?>
-        <div class="entry-meta">
-            <?php kotha_posted_on(); ?>
-        </div><!-- .entry-meta -->
-        <?php endif; ?>
-
         <div class="entry-content">
             <?php the_content(); ?>
         </div> <!-- //.entry-content -->

@@ -26,7 +26,7 @@ class Kotha_Blog_Posts_Widget extends WP_Widget{
 		$title 			= apply_filters('widget_title', $instance['title'] );
 		$count 			= $instance['count'];
 		$order_by 		= $instance['order_by'];
-		
+
 		echo $before_widget;
 
 		$output = '';
@@ -38,14 +38,14 @@ class Kotha_Blog_Posts_Widget extends WP_Widget{
 
 		if ( $order_by == 'latest' ) {
 
-			$args = array( 
+			$args = array(
 				'posts_per_page' => $count,
 				'order' => 'DESC'
 				);
 
 		} else if ( $order_by == 'popular' ) {
 
-			$args = array( 
+			$args = array(
 				'orderby' => 'meta_value_num',
 				'meta_key' => 'post_views_count',
 				'posts_per_page' => $count,
@@ -54,7 +54,7 @@ class Kotha_Blog_Posts_Widget extends WP_Widget{
 
 		} else {
 
-			$args = array( 
+			$args = array(
 				'orderby' => 'comment_count',
 				'order' => 'DESC',
 				'posts_per_page' => $count
@@ -79,7 +79,8 @@ class Kotha_Blog_Posts_Widget extends WP_Widget{
 
 					$output .='<div class="media-body">';
 					$output .= '<h3 class="entry-title"><a href="'.esc_url(get_permalink()).'">'. get_the_title() .'</a></h3>';
-					$output .= '<div class="entry-meta small">' . get_the_time() . ', ' . get_the_date('d M Y') . '</div>';
+					// $output .= '<div class="entry-meta small">' . get_the_time() . ', ' . get_the_date('d M Y') . '</div>';
+					$output .= '<div class="entry-meta small">' . get_the_date('d M Y') . '</div>';
 					$output .='</div>';
 
 				$output .='</div>';
@@ -111,7 +112,7 @@ class Kotha_Blog_Posts_Widget extends WP_Widget{
 
 	function form($instance)
 	{
-		$defaults = array( 
+		$defaults = array(
 			'title' 	=> __('Latest Posts', 'kotha'),
 			'order_by' 	=> 'latest',
 			'count' 	=> 5
@@ -125,7 +126,7 @@ class Kotha_Blog_Posts_Widget extends WP_Widget{
 
 		<p>
 			<label for="<?php echo esc_attr($this->get_field_id( 'order_by' )); ?>"><?php _e('Ordered By', 'kotha'); ?></label>
-			<?php 
+			<?php
 				$options = array(
 					'popular' 	=> __('Popular', 'kotha'),
 					'latest' 	=> __('Latest', 'kotha'),
