@@ -2143,3 +2143,65 @@
             font-size:2.8em;
         }
 
+.uh-form-box{
+	padding:20px;
+	margin-bottom: 20px;
+	background:#fff;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+	text-align:center;
+}
+.uh-form {
+			width   : 100%;
+			display : inline-block !important;
+		}
+		.uh-form input[type=text] {
+			width         : 100%;
+			padding       : 10px 20px 10px 40px;
+			margin        : 5px 0;
+			color         : #666;
+			border        : 1px solid #ccc;
+			font-size     : 14px;
+			border-radius : 4px;
+			min-height    : 45px;
+		}
+		.uh-form .input-job {
+			background: #fff url(https://www.urbanhire.com/img/sprites/briefcase-green.png) no-repeat 10px center;
+		}
+		.uh-form .input-location {
+			background: #fff url(https://www.urbanhire.com/img/sprites/location-green.png) no-repeat 13px center;
+		}
+
+.button-green {
+	margin-top:10px;
+    padding: 15px 30px;
+    width:100%;
+    font-size:17px;
+    color: #fff;
+    background-image: -webkit-linear-gradient(left, #4db6ce, #4db6ce);
+    background-image: -moz-linear-gradient(left, #4db6ce, #4db6ce);
+    background-image: -o-linear-gradient(left, #4db6ce, #4db6ce);
+    background-image: -ms-linear-gradient(left, #4db6ce, #4db6ce);
+    background-image: linear-gradient(to right, #4db6ce, #4db6ce);
+    border: none;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.button-green:hover, .button-standard {
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+.button-green:hover {
+    color: #fff;
+    background-image: -webkit-linear-gradient(left, #4db6ce, #69d5cf 66%, #77e5cf);
+    background-image: -moz-linear-gradient(left, #4db6ce, #69d5cf 66%, #77e5cf);
+    background-image: -o-linear-gradient(left, #4db6ce, #69d5cf 66%, #77e5cf);
+    background-image: -ms-linear-gradient(left, #4db6ce, #69d5cf 66%, #77e5cf);
+    background-image: linear-gradient(to right, #4db6ce, #69d5cf 66%, #77e5cf);
+    border: none;
+    transition: all .5s ease-in-out;
+}
