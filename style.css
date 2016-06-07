@@ -2143,7 +2143,6 @@
             font-weight:100;
             font-size:2.8em;
         }
-<<<<<<< HEAD
 
 .uh-form-box{
 	padding:20px;
@@ -2207,13 +2206,12 @@
     border: none;
     transition: all .5s ease-in-out;
 }
-=======
-  .terms--policy a {
-  	text-transform: uppercase;
-  	font-size: 14px;
-    color: #828995;
-    display: inline-block;
-		margin-left: 15px;
-		margin-right: 15px;
-  }
->>>>>>> 929c2f802af0628c07a73c3ac3b7216d69c9fee8
+
+.terms--policy a {
+	text-transform: uppercase;
+	font-size: 14px;
+  color: #828995;
+  display: inline-block;
+	margin-left: 15px;
+	margin-right: 15px;
+}
