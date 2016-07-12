@@ -112,11 +112,11 @@
     <div class="padding-content text-center">
         <div class="entry-content">
             <?php the_content(); ?>
+            <?php if (!get_theme_mod('kotha_post_tags')): ?>
+                <br>
+                <div class="entry-tags text-left"><?php the_tags(); ?></div>
+            <?php endif; ?>
         </div> <!-- //.entry-content -->
-        <?php if (!get_theme_mod('kotha_post_tags')): ?>
-            <br>
-            <div class="entry-tags text-left"><?php the_tags(); ?></div>
-        <?php endif; ?>
     </div>
 
 </article><!-- #post-## -->
