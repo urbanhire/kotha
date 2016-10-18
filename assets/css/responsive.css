@@ -27,6 +27,9 @@
 		display:none;
 	}
 
+	.padding-content{
+		padding: 20px;
+	}
 
 }
 
@@ -35,6 +38,10 @@
 
 	.slicknav_menu {
 	  display: block;
+	}
+
+	.padding-content{
+		padding: 15px;
 	}
 
 	.sub-menu .menu-item-has-children> a:after,
