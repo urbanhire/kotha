@@ -13,6 +13,15 @@
             		<div>
             			<input type="text" placeholder="Location", name="location" class="input-location" id="filterLocation">
             		</div>
+                    <div>
+                        <input type="hidden" name="utm_source" value="blog">
+                    </div>
+                    <div>
+                        <input type="hidden" name="utm_medium" value="uh_widget">
+                    </div>
+                    <div>
+                        <input type="hidden" name="utm_campaign" value="form_search_widget">
+                    </div>
             		<div>
             			<button class="button-green" type="submit">SEARCH</button>
             		</div>
