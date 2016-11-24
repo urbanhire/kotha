@@ -15,7 +15,7 @@
                 <div id="primary" class="content-area">
                 <?php
                     if ( function_exists('yoast_breadcrumb') ) {
-                        yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+                        yoast_breadcrumb('<p id="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">','</p>');
                     }
                 ?>
 

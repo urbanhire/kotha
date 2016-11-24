@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/Article">
 
 <!-- Gallery Post -->
     <?php if(has_post_format('gallery')) : ?>
@@ -64,7 +64,9 @@
 
         <?php if(has_post_thumbnail()) : ?>
         <div class="thumbnails">
-            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('post-thumbnails', array('class' => 'post-thumbnail img-responsive')); ?></a>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" itemprop="url">
+                <?php the_post_thumbnail('post-thumbnails', array('class' => 'post-thumbnail img-responsive', 'itemprop'=> 'image')); ?>
+            </a>
         </div>
         <?php endif; ?>
 
@@ -72,7 +74,7 @@
 
     <div class="padding-content text-center">
         <header class="entry-header">
-            <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+            <?php the_title( sprintf( '<h2 class="entry-title" itemprop="headline"><a href="%s" rel="bookmark" itemprop="url">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
         </header> <!--/.entry-header -->
 
         <?php if ( 'post' == get_post_type() ) : ?>
@@ -81,7 +83,7 @@
             </div><!-- .entry-meta -->
         <?php endif; ?>
 
-        <div class="entry-content">
+        <div class="entry-content" itemprop="text">
             <?php the_excerpt(__('<span class="read-more-button">Keep Reading</span>', 'kotha')); ?>
 
             <?php

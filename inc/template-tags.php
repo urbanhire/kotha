@@ -93,7 +93,7 @@
                 <li>
                     <span class="author vcard">
                         <?php _e('By ', 'kotha');
-                            printf('<a class="url fn n" href="%1$s">%2$s</a>',
+                            printf('<a itemprop="author" class="url fn n" href="%1$s">%2$s</a>',
                                 esc_url(get_author_posts_url(get_the_author_meta('ID'))),
                                 esc_html(get_the_author())
                             ) ?>
@@ -105,7 +105,7 @@
 
 			<?php if (!get_theme_mod('kotha_post_date')): ?>
                 <li>
-                    <span class="posted-on"><?php the_time('d M Y') ?></span>
+                    <span class="posted-on" itemprop="datePublished"><?php the_time('d M Y') ?></span>
                 </li>
 
                 <li>/</li>
@@ -114,7 +114,7 @@
             <?php if (!get_theme_mod('kotha_post_cat')): ?>
                 <?php if (get_the_category_list()): ?>
                     <li>
-                        <span class="posted-in">
+                        <span class="posted-in" itemprop="keywords">
                             <?php echo get_the_category_list(_x(', ', 'Used between list items, there is a space after the comma.', 'kotha'));
                             ?>
                         </span>

@@ -1,14 +1,14 @@
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>  itemscope itemtype="http://schema.org/Article">
 	<?php if (has_post_thumbnail()) { ?>
         <div class="thumbnails">
-            <?php the_post_thumbnail('post-thumbnails', array('class' => 'post-thumbnail img-responsive')); ?>
+            <?php the_post_thumbnail('post-thumbnails', array('class' => 'post-thumbnail img-responsive', 'itemprop' => 'image' )); ?>
         </div>
     <?php } ?>
 
 	<div class="padding-content">
 	    <header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php the_title( '<h1 class="entry-title" itemprop="headline">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
 		<div class="entry-content">
 			<?php the_content(); ?>

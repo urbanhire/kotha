@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>  itemscope itemtype="http://schema.org/Article">
 
 <!-- Gallery Post -->
     <?php if(has_post_format('gallery')) : ?>
@@ -33,7 +33,7 @@
         <?php endif; ?>
 
         <header class="entry-header">
-            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+            <?php the_title( sprintf( '<h1 class="entry-title" itemprop="headline"><a href="%s" rel="bookmark" itemprop="url">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
         </header> <!--/.entry-header -->
 
         <?php if ( 'post' == get_post_type() ) : ?>
@@ -45,7 +45,7 @@
 <!-- Video Post -->
     <?php elseif(has_post_format('video')) : ?>
         <header class="entry-header">
-            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+            <?php the_title( sprintf( '<h1 class="entry-title" itemprop="headline"><a href="%s" rel="bookmark" itemprop="url">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
         </header> <!--/.entry-header -->
 
         <?php if ( 'post' == get_post_type() ) : ?>
@@ -68,7 +68,7 @@
 <!-- Audio Post -->
     <?php elseif(has_post_format('audio')) : ?>
         <header class="entry-header">
-            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+            <?php the_title( sprintf( '<h1 class="entry-title" itemprop="headline"><a href="%s" rel="bookmark" itemprop="url">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
         </header> <!--/.entry-header -->
 
         <?php if ( 'post' == get_post_type() ) : ?>
@@ -92,7 +92,7 @@
 
         <div class="padding-content text-center">
             <header class="entry-header">
-                <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+                <?php the_title( sprintf( '<h1 class="entry-title" itemprop="headline"><a href="%s" rel="bookmark" itemprop="url">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
             </header> <!--/.entry-header -->
             <?php if ( 'post' == get_post_type() ) : ?>
             <div class="entry-meta">
@@ -103,14 +103,14 @@
 
         <?php if(has_post_thumbnail()) : ?>
         <div class="thumbnails">
-            <?php the_post_thumbnail('post-thumbnails', array('class' => 'post-thumbnail img-responsive')); ?>
+            <?php the_post_thumbnail('post-thumbnails', array('class' => 'post-thumbnail img-responsive', 'itemprop'=> 'image')); ?>
         </div>
         <?php endif; ?>
 
     <?php endif; ?>
 
     <div class="padding-content text-center">
-        <div class="entry-content">
+        <div class="entry-content" itemprop="text">
             <?php the_content(); ?>
             <?php if (!get_theme_mod('kotha_post_tags')): ?>
                 <br>
