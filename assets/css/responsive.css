@@ -40,6 +40,11 @@
 	  display: block;
 	}
 
+	.widget_facebook_likebox,
+	.widget_twitter_timeline {
+		display: none;
+	}
+
 	.padding-content{
 		padding: 15px;
 	}
