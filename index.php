@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <?php if(get_theme_mod('kotha_home_banner')): ?>
     <div class="home-banner" style="background-image:url('<?php echo esc_url(get_theme_mod('kotha_home_banner'));?>');">
-            
+
                 <div class="outer">
                     <div class="middle">
                         <div class="inner">
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                 </div>
-            
+
     </div><!-- /Show banner -->
     <?php else: ?>
                         <!--banner hidden-->
@@ -41,7 +41,7 @@
 				<?php }
 				 ?>
 				">
-					
+
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main" role="main">
 
@@ -74,7 +74,7 @@
 						</main><!-- #main -->
 					</div><!-- #primary -->
 				</div> <!-- /col -->
-				<!-- Blogsidebar -->			
+				<!-- Blogsidebar -->
 				<?php get_sidebar(); ?>
 			</div> <!-- /.row -->
 		</div> <!-- /.container -->

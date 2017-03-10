@@ -2236,6 +2236,24 @@
 #wpdevar_comment_1 {
 	margin-top: 30px
 }
-.fb-comments {
-	margin: -15px;
+
+
+.home .entry-content p:last-child,
+.category .entry-content p:last-child {
+		margin-bottom: 0 !important
+	}
+
+.home header.entry-header,
+.category header.entry-header {
+	margin-bottom: 0 !important
+}
+
+.home header.entry-header h2,
+.category header.entry-header h2 {
+	margin-bottom:  0 !important
+}
+
+.search-header {
+	margin-bottom: 5px;
+	padding-bottom: 20px !important
 }
