@@ -2220,17 +2220,17 @@
 }
 
 .rad_rapidology .rad_rapidology_form_container .rad_rapidology_form_content {
-	padding: 20px
+	padding: 20px !important
 }
 .rad_rapidology .rad_rapidology_form_container .rad_rapidology_form_header {
-	padding: 0;
+	padding: 0 !important;
 }
 .rad_rapidology .rad_rapidology_inline_form .rad_rapidology_image.rad_rapidology_image_slideup {
-	padding-left: 0;
-  padding-right: 0;
-  width: 100px;
+	padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100px !important;
 }
-.rad_rapidology .rad_power .rad_power_mode_inline {
+.rad_rapidology .rad_rapidology_optin div {
 	display: none !important;
 }
 #wpdevar_comment_1 {
