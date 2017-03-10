@@ -1290,6 +1290,10 @@
 
 
 /* === Comments === */
+	#comment {
+		margin: -15px
+	}
+
 	#comments .media{
 		border-bottom: 1px solid #F5F2F2;
 	}
@@ -1714,8 +1718,6 @@
 		text-transform: uppercase;
 		font-size: 16px;
 		color: #222;
-		margin-bottom: 20px;
-		padding-bottom: 16px;
 		text-align: center;
 	}
 
@@ -2215,4 +2217,16 @@
   display: inline-block;
 	margin-left: 15px;
 	margin-right: 15px;
+}
+
+.rad_rapidology .rad_rapidology_form_container .rad_rapidology_form_content {
+	padding: 20px
+}
+.rad_rapidology .rad_rapidology_form_container .rad_rapidology_form_header {
+	padding: 0;
+}
+.rad_rapidology .rad_rapidology_inline_form .rad_rapidology_image.rad_rapidology_image_slideup {
+	padding-left: 0;
+  padding-right: 0;
+  width: 100px;
 }
