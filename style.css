@@ -2232,6 +2232,10 @@
   width: 100px !important;
 }
 
+.rad_rapidology .rad_rapidology_optin a {
+	display: none !important
+}
+
 #wpdevar_comment_1 {
 	margin-top: 30px
 }
