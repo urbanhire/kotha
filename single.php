@@ -40,16 +40,6 @@
                                     </div>
                                 <?php endif; ?>
 
-
-                                    <?php
-                                        // If comments are open or we have at least one comment, load up the comment template
-                                        if ( comments_open() || get_comments_number() ) : ?>
-                                            <div class="padding-content white-color margin-top-40">
-                                                <?php comments_template(); ?>
-                                            </div>
-                                        <?php endif;
-                                    ?>
-
                                 <?php
                                     // don't-delete
                                     $count_post = get_post_meta( $post->ID, 'post_views_count', true);

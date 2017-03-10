@@ -246,7 +246,7 @@
 		font-weight:400;
 		line-height: 23px;
 		background: #f1f1f1;
-		color:#555555;
+		color:rgba(0,0,0,.8);
 		-webkit-font-smoothing: antialiased;
 	}
 
@@ -259,7 +259,7 @@
 		clear: both;
 		margin: 0 0 15px;
 		font-weight: 700;
-		color: #000;
+		color: rgba(0,0,0,.9);
 	}
 
 	p {
@@ -1055,10 +1055,10 @@
 	}
 
 	article header.entry-header h1.entry-title a{
-		color: #555555;
+		color: rgba(0,0,0,.9);
 		font-size: 30px;
-		font-family: 'sf_ui_displayregular', sans-serif;
-		font-weight: 400;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
 	}
 
 	article header.entry-header h1.entry-title a:hover{
@@ -2229,4 +2229,13 @@
 	padding-left: 0;
   padding-right: 0;
   width: 100px;
+}
+.rad_rapidology .rad_power .rad_power_mode_inline {
+	display: none !important;
+}
+#wpdevar_comment_1 {
+	margin-top: 30px
+}
+.fb-comments {
+	margin: -15px;
 }
