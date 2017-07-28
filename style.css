@@ -2232,7 +2232,8 @@
   width: 100px !important;
 }
 
-.rad_rapidology .rad_rapidology_optin a {
+.rad_rapidology .rad_rapidology_optin a,
+.rad_power.rad_power_mode_inline {
 	display: none !important
 }
 
