@@ -84,7 +84,8 @@
         <?php endif; ?>
 
         <div class="entry-content" itemprop="text">
-            <?php the_excerpt(__('<span class="read-more-button">Keep Reading</span>', 'kotha')); ?>
+            <?php the_excerpt(); ?>
+             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" itemprop="url">Baca selengkapnya</a>
 
             <?php
                 wp_link_pages( array(
