@@ -23,7 +23,7 @@
   		    <?php endif; ?>
         </span>
       </div>
-      <div class="pull-left text-u-c text-xs m-t-xs terms--policy">
+      <div class="pull-right text-u-c text-xs m-t-xs terms--policy">
         <a href="https://www.urbanhire.com/terms-and-conditions" title="Urbanhire Terms &amp; Conditions" class="m-r m-l">Terms &amp; Conditions &amp; Privacy Policy</a>
       </div>
       <p>&nbsp;</p>
